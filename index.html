@@ -1,183 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Misul The Nail Bar</title>
     <!-- <link rel="stylesheet" href="CSS/header.css"> -->
-    <link rel="stylesheet" href="CSS/home-body.css">
-    <link rel="stylesheet" href="CSS/login-popup.css">
+    <link rel="stylesheet" href="CSS/home-body.css" />
+    <link rel="stylesheet" href="CSS/login-popup.css" />
     <!-- <link rel="stylesheet" href="CSS/utils.css">
     <link rel="stylesheet" href="CSS/responsive.css"> -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
     <script>
-        $(function(){
-            $('#headerr').load("header.html");
-            $('#footerr').load("footer.html");
-        });
+      $(function () {
+        $("#headerr").load("header.html");
+        // $('#footerr').load("footer.html");
+      });
 
-        // $(document).on('click', 'a', function() {
-        //     $('a.active')?.removeClass('active');
-        //     $(this).addClass('active');
-        // });
+      // $(document).on('click', 'a', function() {
+      //     $('a.active')?.removeClass('active');
+      //     $(this).addClass('active');
+      // });
     </script>
-    
-</head>
-<body>
+  </head>
+  <body>
     <div id="headerr"></div>
     <div class="banner">
-        <div class="banner-texts-container">
-            <div class="banner-text">
-                <h1>Limited Time Offer</h1>
-                <h2>Discount upto 10%</h2>
-                <h3>Make your Nails Elegant</h3>
-                <button>Book Now</button>
-            </div>
-            <div class="banner-text">
-                <h1>Limited Time Offer1</h1>
-                <h2>Discount upto 15%</h2>
-                <h3>Make your Nails Pretty</h3>
-                <button>Book Now</button>
-            </div>
-            <div class="banner-text">
-                <h1>Limited Time Offer2554</h1>
-                <h2>Discount upto 20%</h2>
-                <h3>Make your Nails Clean</h3>
-                <button>Book Now</button>
-            </div>
-            <div class="banner-text">
-                <h1>Limited Time Offer3</h1>
-                <h2>Discount upto 25%</h2>
-                <h3>Make your Nails Shiny</h3>
-                <button>Book Now</button>
-            </div>
+      <div class="banner-texts-container">
+        <div class="banner-text">
+          <h1>Limited Time Offer</h1>
+          <h2>Discount upto 10%</h2>
+          <h3>Make your Nails Elegant</h3>
+          <button>Book Now</button>
         </div>
-        <!-- <img src="CSS/banner-imgs/banner1.jpeg" alt="">
+        <div class="banner-text">
+          <h1>Flash Sale</h1>
+          <h2>Discount upto 15%</h2>
+          <h3>Make your Nails Pretty</h3>
+          <button>Book Now</button>
+        </div>
+        <div class="banner-text">
+          <h1>Limited Time Offer2</h1>
+          <h2>Discount upto 20%</h2>
+          <h3>Make your Nails Clean</h3>
+          <button>Book Now</button>
+        </div>
+        <div class="banner-text">
+          <h1>Limited Time Offer3</h1>
+          <h2>Discount upto 25%</h2>
+          <h3>Make your Nails Shiny</h3>
+          <button>Book Now</button>
+        </div>
+      </div>
+      <!-- <img src="CSS/banner-imgs/banner1.jpeg" alt="">
         <img src="CSS/banner-imgs/banner2.jpeg" alt="">
         <img src="CSS/banner-imgs/banner3.jpeg" alt="">
         <img src="CSS/banner-imgs/banner4.jpg" alt=""> -->
     </div>
-    
+
     <div id="footerr"></div>
     <script>
-        function showSidebar(){
-            sidebar.style.transform = 'translateX(100%)';
-            sidebar.style.boxShadow = '10px 0 10px rgba(0,0,0,0.1)';
+      function showSidebar() {
+        sidebar.style.transform = "translateX(100%)";
+        sidebar.style.boxShadow = "10px 0 10px rgba(0,0,0,0.1)";
+      }
+
+      function hideSidebar() {
+        sidebar.style.transform = "translateX(-100%)";
+      }
+
+      window.addEventListener("scroll", () => {
+        if(window.innerWidth>768)
+        {
+            header.classList.toggle("sticky", window.scrollY > 0);
         }
-    
-        function hideSidebar(){
-            sidebar.style.transform = 'translateX(-100%)';
-        }
-        
-        window.addEventListener("scroll",()=>{
-            header.classList.toggle("sticky", window.scrollY>0)
+      });
+
+      const banner_texts = document.querySelectorAll(
+        ".banner-texts-container .banner-text"
+      );
+      // console.log(banner_texts.length);
+
+      function restartAnimation(Element1, Element2, Element3, Element4) {
+        Element1.style.animation = `slidetextright 2000ms forwards`;
+        Element2.style.animation = `slidetextright 2200ms forwards`;
+        Element3.style.animation = `slidetextright 2400ms forwards`;
+        Element4.style.animation = `slidetextright 2600ms forwards`;
+        setTimeout(() => {
+          Element1.style.animation = "fadeout 2000ms forwards";
+          Element2.style.animation = "fadeout 2000ms forwards";
+          Element3.style.animation = "fadeout 2000ms forwards";
+          Element4.style.animation = "fadeout 2000ms forwards";
+        }, 8000);
+      }
+
+      function animateBannerText(banner_text) {
+        return new Promise((resolve) => {
+          let animatedElement1 = banner_text.querySelector("h1");
+          let animatedElement2 = banner_text.querySelector("h2");
+          let animatedElement3 = banner_text.querySelector("h3");
+          let animatedElement4 = banner_text.querySelector("button");
+
+          setTimeout(() => {
+            restartAnimation(
+              animatedElement1,
+              animatedElement2,
+              animatedElement3,
+              animatedElement4
+            );
+          }, 50);
+
+          setTimeout(() => {
+            resolve();
+          }, 11050);
         });
-       
-        const banner_texts = document.querySelectorAll('.banner-texts-container .banner-text');
-        // console.log(banner_texts.length);
-        
+      }
 
-        function restartAnimation(Element1,Element2,Element3,Element4) {
-            Element1.style.animation = `slidetextright 2000ms forwards`;
-            Element2.style.animation = `slidetextright 2200ms forwards`;
-            Element3.style.animation = `slidetextright 2400ms forwards`;
-            Element4.style.animation = `slidetextright 2600ms forwards`;
-            setTimeout(() => {
-                Element1.style.animation = 'fadeout 2000ms forwards';
-                Element2.style.animation = 'fadeout 2000ms forwards';
-                Element3.style.animation = 'fadeout 2000ms forwards';
-                Element4.style.animation = 'fadeout 2000ms forwards';
-            }, 8000);
-        }
-
-        function animateBannerText(banner_text) {
-            return new Promise(resolve => {
-                let animatedElement1 = banner_text.querySelector('h1');
-                let animatedElement2 = banner_text.querySelector('h2');
-                let animatedElement3 = banner_text.querySelector('h3');
-                let animatedElement4 = banner_text.querySelector('button');
-
-                setTimeout(() => {
-                    restartAnimation(animatedElement1, animatedElement2, animatedElement3, animatedElement4);
-                }, 50);
-
-                setTimeout(() => {
-                    resolve();
-                }, 11050);
+      async function text_animation() {
+        for (let i = 0; i < banner_texts.length; i++) {
+          await animateBannerText(banner_texts[i]);
+          if (i === banner_texts.length - 1) {
+            banner_texts.forEach((banner_text) => {
+              banner_text.style.transform = "translateY(0)";
             });
+            i = -1;
+          } else {
+            banner_texts.forEach((banner_text) => {
+              banner_text.style.transform = `translateY(-${100 * (i + 1)}%)`;
+            });
+          }
         }
+      }
 
-        async function text_animation() {
-            
-            for (let i = 0; i < banner_texts.length; i++) {
-                await animateBannerText(banner_texts[i]);
-                if (i === banner_texts.length - 1) {
-                    banner_texts.forEach(banner_text => {
-                        banner_text.style.transform = 'translateY(0)';
-                    });
-                    i = -1;
-                } else {
-                    banner_texts.forEach(banner_text => {
-                        banner_text.style.transform = `translateY(-${100 * (i + 1)}%)`;
-                    });
-                }
-            }
-        }
+      text_animation();
+      // function text_animation()
+      // {
+      //     for(let i = 0;i<banner_texts.length;i++)
+      //     {
+      //         let animatedElement1 = banner_texts[i].querySelector('h1');
+      //         let animatedElement2 = banner_texts[i].querySelector('h2');
+      //         let animatedElement3 = banner_texts[i].querySelector('h3');
+      //         let animatedElement4 = banner_texts[i].querySelector('button');
 
-        text_animation();
-        // function text_animation()
-        // {
-        //     for(let i = 0;i<banner_texts.length;i++)
-        //     {
-        //         let animatedElement1 = banner_texts[i].querySelector('h1');
-        //         let animatedElement2 = banner_texts[i].querySelector('h2');
-        //         let animatedElement3 = banner_texts[i].querySelector('h3');
-        //         let animatedElement4 = banner_texts[i].querySelector('button');
+      //         setTimeout(() => {
+      //             restartAnimation(animatedElement1,animatedElement2,animatedElement3,animatedElement4);
+      //         }, 50);
 
-        //         setTimeout(() => {
-        //             restartAnimation(animatedElement1,animatedElement2,animatedElement3,animatedElement4);
-        //         }, 50);
+      //         setTimeout(()=>{
+      //             if(i === banner_texts.length - 1)
+      //             {
+      //                 i = -1;
+      //                 banner_texts.forEach((banner_text)=>{
+      //                     banner_text.style.transform = 'translateY(300%)';
+      //                 });
+      //             }
+      //             else
+      //             {
+      //                 banner_texts.forEach((banner_text)=>{
+      //                     banner_text.style.transform = 'translateY(-100%)';
+      //                 });
+      //             }
+      //         },11000*(i+1));
+      //     }
+      // }
 
-        //         setTimeout(()=>{
-        //             if(i === banner_texts.length - 1)
-        //             {
-        //                 i = -1;
-        //                 banner_texts.forEach((banner_text)=>{
-        //                     banner_text.style.transform = 'translateY(300%)';
-        //                 });
-        //             }
-        //             else
-        //             {
-        //                 banner_texts.forEach((banner_text)=>{
-        //                     banner_text.style.transform = 'translateY(-100%)';
-        //                 });
-        //             }
-        //         },11000*(i+1));
-        //     }
-        // }
+      // text_animation();
 
-        // text_animation();
+      // const animatedElement1 = document.querySelector('h1');
+      // const animatedElement2 = document.querySelector('h2');
+      // const animatedElement3 = document.querySelector('h3');
+      // const animatedElement4 = document.querySelector('button');
 
+      // setTimeout(() => {
+      //     restartAnimation();
+      // }, 50);
 
-        // const animatedElement1 = document.querySelector('h1');
-        // const animatedElement2 = document.querySelector('h2');
-        // const animatedElement3 = document.querySelector('h3');
-        // const animatedElement4 = document.querySelector('button');
-        
-
-        // setTimeout(() => {
-        //     restartAnimation();
-        // }, 50);
-
-        // setInterval(() => {
-        //     setTimeout(() => {
-        //         restartAnimation();
-        //     }, 50);
-        // }, 11000);   
-        
+      // setInterval(() => {
+      //     setTimeout(() => {
+      //         restartAnimation();
+      //     }, 50);
+      // }, 11000);
     </script>
-</body>
+  </body>
 </html>
