@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <!-- <link rel="stylesheet" href="CSS/header.css"> -->
+    <link rel="stylesheet" href="CSS/contact.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $('#headerr').load("header.html");
+            $('#footerr').load("footer.html");
+        });
+    </script>
+    <!-- <script type="module" src="header-footer.js"></script> -->
+</head>
+<body>
+    <div id="headerr"></div>
+    <form class="contact-container">
+        <h1>Contact Us</h1>
+        <div class="input-name">
+            <input type="text" class="first-name" name="fName" placeholder="First Name" required>
+            <input type="text" class="last-name" name="lName" placeholder="Last Name" required>
+        </div>
+        <div class="input-email">
+            <input type="email" class="email" name="email" placeholder="Email" required>
+            <!-- <span id="email-error">Please enter a valid email</span> -->
+        </div>
+        <div class="input-phone">
+            <input type="number" class="phone" name="phone" min="1000000000" max="9999999999" placeholder="Phone Number" required>
+        </div>
+        <div class="input-message">
+            <textarea id="message" rows="4" maxlength="500"placeholder="Message"></textarea>
+            <p id="text-count"></p>
+        </div>
+        <div class="action-btn">
+            <button type="submit" class="btn btn-submit">Submit</button>
+        </div>
+        <div class="or-text">Or Contact us on our socials</div>
+        <div class="social">
+            <span><a href="https://www.facebook.com/MisulTheNailBar" class="social-logo"><ion-icon class="icon fb" name="logo-facebook"></ion-icon></a></span>
+            <span><a href="https://www.instagram.com/misul_the_nail_bar/" class="social-logo"><ion-icon class="icon insta" name="logo-instagram"></ion-icon></a></span>
+            <span><a href="https://www.linkedin.com/company/misul-the-nail-bar/" class="social-logo"><ion-icon class="icon linkedin" name="logo-linkedin"></ion-icon></a></span>
+            <span><a href="https://wa.me/+918777490407" class="social-logo"><ion-icon class="icon wp" name="logo-whatsapp"></ion-icon></a></span>
+        </div>
+    </form>
+    <div id="footerr"></div>
+    <!-- <script>
+        const Links = document.querySelectorAll("#navbar li a");
+        
+            Links.forEach(link => {
+                if (link.textContent === "Contact Us") {
+                    console.log(link.textContent);
+                    link.classList.add("active");
+                }
+            });
+    </script> -->
+<!-- <script src="contact.js"></script>  -->
+    <script>
+        function showSidebar(){
+            sidebar.style.display = 'flex';
+        }
+
+        function hideSidebar(){
+            // const sidebar = document.querySelector("#sidebar");
+            sidebar.style.display = 'none';
+        }
+        
+        window.addEventListener("scroll",()=>{
+            header.classList.toggle("sticky", window.scrollY>0)
+        });
+    </script>
+</body>
+</html>

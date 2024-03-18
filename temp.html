@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misul The Nail Bar</title>
+    <!-- <link rel="stylesheet" href="CSS/header.css"> -->
+    <link rel="stylesheet" href="CSS/home-body.css">
+    <link rel="stylesheet" href="CSS/login-popup.css">
+    <!-- <link rel="stylesheet" href="CSS/utils.css">
+    <link rel="stylesheet" href="CSS/responsive.css"> -->
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var navbarItems = document.querySelectorAll("#navbar li");
+            
+            navbarItems.forEach(function(item) {
+                var anchor = item.querySelector("a");
+                var subMenu = item.querySelector(".sub-menu");
+                
+                var hover = anchor.addEventListener("mouseover", function() {
+                    subMenu.style.display = "block";
+                });
+                
+                hover && subMenu.addEventListener("mouseover", function() {
+                    subMenu.style.display = "block";
+                });
+                // item.addEventListener("mouseleave",function(){
+                //     subMenu.style.display = "none"
+                // });
+            });
+        });
+    </script> -->
+</head>
+<body>
+
+    <section id = "header">
+        <a href="#"><img src = "img/logo1.png" class="logo"alt="Error"></a>
+        <ul id="navbar">
+            <li><a class = "active" href="index.html">Home</a></li>
+            <li><a class = "dropdown" href="#">About Us</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="collections.html">Collections</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li class="login-popup">Login</li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </section>
+
+    <section id="home-body">
+        <div class="wrapper">
+            <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+            <div class="form-box login">
+                <h2>Login</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="email" required>
+                        <label class="email-label">Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="eye-off" class="eye"></ion-icon></span>
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">
+                        Remember me</label>
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="login-btn">Login</button>
+                    <div class="login-signup">
+                    <p>Dont't have an account?
+                        <a href="#" class="signup-link">Signup</a>
+                    </p>
+                    </div>
+                </form>
+            </div>
+            <div class="form-box signup">
+                <h2>Signup</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="person-circle"></ion-icon></span>
+                        <input type="text" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="email" required>   
+                        <label class="email-label">Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="eye-off" class="eye"></ion-icon></span>
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">
+                        I agree to the terms & conditions</label>
+                    </div>
+                    <button type="submit" class="signup-btn">Signup</button>
+                    <div class="login-signup">
+                        <p>Already have an account?
+                            <a href="#" class="login-link">Login</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+<!-- <script src="script.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,218 @@
+<footer id="footer">
+    <div class="row">
+        <div class="col">
+            <img src="img/logologo2.png" class="footer-logo" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quod fuga enim quas, reiciend</p>
+        </div>
+        <div class="col">
+            <h3>Contacts<div class="underline"><span></span></div></h3>
+            <p><strong>Address:</strong> E-133/11 Ramgarh Kolkata-700047</p>
+            <p><strong>Hours:</strong> Lorem ipsum dolor</p>
+            <p class="Email-Id"><strong>Email-Id:</strong> misulthenailbar@gmail.com</p>
+            <p><strong>Phone:</strong> 8100491102</p>
+        </div>
+        <div class="col Links">
+            <h3>Links<div class="underline"><span></span></div></h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about us.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="col">
+            <h3>Follow Us<div class="underline"><span></span></div></h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/MisulTheNailBar"><i class="fab fa-facebook-f fb"></i></a>
+                <a href="https://www.instagram.com/misul_the_nail_bar/"><i class="fab fa-instagram insta"></i></a>
+                <a href="https://www.linkedin.com/company/misul-the-nail-bar/"><i class="fab fa-linkedin linkedin"></i></a>
+                <a href="https://wa.me/+918777490407"><i class="fab fa-whatsapp wp"></i></a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <p class="copyright">Copyright &copy; Misul The Nail Bar</p>
+</footer>
+
+<style>
+    :root{
+    --color-footer-bg : pink;
+    --color-text : black;
+    --color-icons : black;
+    --color-bg-icons : white;
+    --color-hover-icons : white;
+    --color-hover-fb-bg : #316FF6;
+    --color-hover-insta-bg : radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+    --color-hover-linkedin-bg : #0077b5;
+    --color-hover-wp-bg : #075E54;
+    --color-underline-animation : #c55772;
+    }
+
+
+    footer{
+        width: 100%;
+        height: 275px;
+        background-color: var(--color-footer-bg);
+        margin-top: 70px;
+        color: var(--color-text);
+        /* position: absolute;
+        bottom: 0; */
+        padding: 35px 0 30px;
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .row{
+        width: 92%;
+        margin-left:80px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+
+    .col{
+        flex-basis: 25%;
+        padding: 10px;
+        align-content: center;
+    }
+
+    .col:nth-child(3){
+        flex-basis: 15%;
+    }
+
+
+    .footer-logo{
+        width: 140px;
+        /* height: 22.5px; */
+        margin-bottom: 20px;
+    }
+
+    .col h3{
+        width: fit-content;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .col .Email-Id{
+        margin-top: 10px;
+        /* border-bottom: 1px solid #000; */
+        width: fit-content;
+    }
+
+    .col.Links{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .col ul{
+        margin-left: 32px;
+    }
+
+    .col ul li{
+        list-style: none;
+        margin-bottom: 5px;
+    }
+
+    .col ul li a:hover{
+        font-weight: 600;
+    }
+
+    .col ul li a{
+        text-decoration: none;
+        color: var(--color-text);
+    }
+
+
+    .social-icons .fab{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        font-size: 20px;
+        color: var(--color-icons);
+        background: var(--color-bg-icons);
+        margin-right: 15px;
+    }
+
+    .social-icons .fab.fb:hover{
+        background: var(--color-hover-fb-bg);
+        transition: 0.5s ease-in-out;
+        color: var(--color-hover-icons);
+        font-size: 25px;
+    }
+
+    .social-icons .fab.insta:hover{
+        background: var(--color-hover-insta-bg);
+        transition: 0.5s ease-in-out;
+        color: var(--color-hover-icons);
+        font-size: 25px;
+    }
+
+    .social-icons .fab.linkedin:hover{
+        background: var(--color-hover-linkedin-bg);
+        transition: 0.5s ease-in-out;
+        color: var(--color-hover-icons);
+        font-size: 25px;
+    }
+
+    .social-icons .fab.wp:hover{
+        background: var(--color-hover-wp-bg);
+        transition: 0.5s ease-in-out;
+        color: var(--color-hover-icons);
+        font-size: 25px;
+    }
+
+
+    hr{
+        width: 90%;
+        border: 0;
+        border-bottom: 1px solid #000;
+        margin: 10px auto;
+    }
+
+    .copyright{
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.2em;
+    }
+
+
+    .underline{
+        width: 100%;
+        height: 5px;
+        background: transparent;
+        border-radius: 3px;
+        position: absolute;
+        top: 25px;
+        left: 0;
+        overflow: hidden;
+    }
+
+    .underline span{
+        width: 80%;
+        height: 100%;
+        background: var(--color-underline-animation);
+        border-radius: 3px;
+        position: absolute;
+        top: 0;
+        left: 10px;
+        animation: moving 2s linear infinite;
+    }
+
+    @keyframes moving{
+        0%{
+            left: -100%;
+        }
+
+        100%{
+            left: 100%;
+        }
+    }
+</style>
+
+<script src="https://kit.fontawesome.com/bb2ef54444.js"></script>

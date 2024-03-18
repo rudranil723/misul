@@ -1,0 +1,191 @@
+:root{
+    --color-background : white;
+    --color-text-header : rgb(252, 111, 134);
+    --color-text-input-field : #000000;
+    --color-border-1 : #c55772;
+    --color-background-input-field : #FFFFFF;
+    --color-icon : #000000;
+    --color-actions : rgb(252, 111, 134);
+    --color-placeholder : #000000;
+    --color-hover-fb : #316FF6;
+    --color-hover-insta-bg : radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+    --color-hover-linkedin : #0077b5;
+    --color-hover-wp : #075E54;
+}
+
+
+body{
+    box-sizing : border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-background);
+    /* background: url("nails.webp") no-repeat;
+    background-size: cover;
+    background-position: center; */
+    min-height: 100vh;
+    color: var(--color-text-header);
+    /* min-height: 167vh; */
+    position: relative;
+}
+
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-top: 126px;
+}
+
+input{
+    height: 56px;
+    border-radius: 12px;
+    border : 2px solid var(--color-border-1);
+    outline: none;
+    width: 456px;
+    padding: 0 8px 0 16px;
+    background-color: var(--color-background-input-field);
+    color: var(--color-text-input-field);
+}
+
+.input-name{
+    display: flex;
+    justify-content: space-between;
+    width: 456px;
+}
+
+.input-name input{
+    width: 220px;
+}
+
+.phone::-webkit-inner-spin-button,
+.phone::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input-message{
+    height: 235px;
+    background-color: var(--color-background-input-field);
+    padding: 9px 8px 0px;
+    width: 456px;
+    border-radius: 12px;
+}
+
+.input-message #message{
+    height: 200px;
+    border-radius: 12px;
+    border : 2px solid var(--color-border-1);
+    outline: none;
+    width: 100%;
+    padding: 16px 0px 16px 8px;
+    background: transparent;
+    color: var(--color-text-input-field);
+    resize: none; 
+    overflow-y: auto;
+}
+
+.input-message #message::-webkit-scrollbar{
+    width: 5px;
+    
+}
+
+.input-message #message::-webkit-scrollbar-track{
+    background: transparent;
+    margin-block: 16px;
+}
+
+.input-message #message::-webkit-scrollbar-thumb{
+    background: var(--color-actions);
+    border-radius: 20px;
+    cursor: default;
+    
+}
+
+#text-count{
+    width: 100%;
+    text-align: right;
+    color: var(--color-text-input-field);
+    font-weight: 500;
+    font-size: 10px;
+}
+
+.btn{
+    height: 40px;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 12px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.btn-submit{
+    background-color: var(--color-actions);
+    width: 480px;
+    font-weight: 600;
+}
+.social{
+    width: 432px;
+    height: 64px;
+    /* border: 1px solid var(--color-border-1); */
+    border: none;
+    border-radius: 12px;
+    padding : 12px 24px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.social span{
+    width : 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+span .social-logo{
+    height: 40px;
+    width: 40px;
+}
+
+span a .icon{
+    height: 40px;
+    width: 40px;
+    color :var(--color-icon);
+}
+
+::placeholder, .or-text{
+    color : var(--color-placeholder);
+}
+
+a.social-logo{
+    text-decoration: none;
+}
+
+
+.icon.fb:hover{
+    color: var(--color-hover-fb);
+    transition: 0.1s ease-in-out;
+}
+
+.icon.insta{
+    border-radius: 10px;
+}
+
+.icon.insta:hover{
+    background: var(--color-hover-insta-bg);
+    transition: 0.1s ease-in-out;
+    color : white;
+}
+
+.icon.linkedin:hover{
+    color: var(--color-hover-linkedin);
+    transition: 0.1s ease-in-out;
+}
+
+.icon.wp:hover{
+    color: var(--color-hover-wp);
+    transition: 0.1s ease-in-out;
+}
+
+
+

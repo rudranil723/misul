@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+#body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('nails.webp') no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+
+#header{
+    height: 90px;
+    position: fixed;
+    width : 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: rgb(185, 171, 171); */
+    /* background-color: #E3E6F3; */
+    background: transparent;
+    padding : 20px 80px;
+    /* box-shadow : 0px 10px 12px black; */
+}
+
+.logo{
+    width: 200px;
+    height: 85px;
+    padding: 0 5px;
+}
+
+#navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar li{
+    list-style: none;
+    padding : 0 20px;
+    position: relative;
+}
+
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    /* color : #1a1a1a; */
+    color : white;
+    transition: 0.3s ease;
+}
+
+#navbar li a+.sub-menu li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color : #1a1a1a;
+    /* color : white; */
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active{
+    /* color : #088178; */
+    color: #162938;
+}
+
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width : 30%;
+    height : 2px;
+    position : absolute;
+    bottom: -4px;
+    left : 20px;
+    /* background-color : #088178; */
+    background-color: #162938;
+}
+
+/* .dropdown{
+    margin-bottom: 10px;
+} */
+
+.sub-menu{
+    display : none;
+}
+
+#navbar li .sub-menu.active-submenu{
+    display: block;
+    position: absolute;
+    background-color: #fff;
+
+    margin-top: 15px;
+    margin-left: 15px;
+    border : 1px solid black;
+    border-radius:8px;
+}
+/* #navbar li a:hover .header:hover{
+    display: block;
+    position: absolute;
+    background-color: #fff;
+
+    margin-top: 15px;
+    margin-left: 15px;
+    border : 1px solid black;
+    border-radius: 3px;
+}*/
+
+
+#navbar li .sub-menu.active-submenu ul{
+    margin : 5px 0px;
+    display : block;
+}
+
+#navbar li .sub-menu.active-submenu ul li{
+    width : 170px;
+    padding : 15px;
+    /* border-bottom : 1px solid black;
+    border-radius: 1px; */
+    /* background: transparent;*/
+    text-align : left;
+}
+
+
+#navbar li .sub-menu.active-submenu li:hover a{
+    color : white
+}
+.sub-menu.active-submenu li:hover{
+background-color: aquamarine;
+}
+/* #navbar li .sub-menu li a:hover{
+    color: white;
+} */
+
+#navbar li .sub-menu.active-submenu li a:hover::after{
+    background-color: white;
+}
+
+/* .bg{
+
+    width: 100%;
+} */
+
+.login-popup{
+    font-size: 16px;
+    font-weight: 600;
+    /* color : #1a1a1a; */
+    color : white;
+    transition: 0.3s ease;
+}
+
+.login-popup:hover{
+    /* color : #088178; */
+    color: #162938;
+    cursor: pointer;
+}
+
+.login-popup:hover::after{
+    content: "";
+    width : 30%;
+    height : 2px;
+    position : absolute;
+    bottom: -4px;
+    left : 20px;
+    /* background-color : #088178; */
+    background-color: #162938;
+}
+
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border : 2px solid rgba(255,255,255,.5);
+    border-radius : 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition : transform .5s ease, height.3s ease;
+}
+
+.wrapper .form-box{
+    width: 100%;
+    padding : 40px;
+}
+
+.wrapper.active-popup{
+    transform: scale(1);
+}
+
+.wrapper.active{
+    height: 500px;
+}
+
+.wrapper .form-box.login{
+    transition: transform .18s ease;
+    transform : translateX(0);
+}
+
+.wrapper.active .form-box.login{
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper .form-box.signup{
+    position: absolute;
+    transform : translateX(400px);
+}
+
+.wrapper.active .form-box.signup{
+    transition: transform .18s ease;
+    transform : translateX(0);
+}
+
+
+.wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #162938;
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.form-box h2{
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+}
+
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-box label.invalid{
+    top : -5px;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label
+{
+    top : -5px;
+}
+
+
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 57px;
+}
+.eye:hover{
+    cursor: pointer;
+}
+.remember-forgot{
+    font-size: .9em;
+    color: #162938;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.remember-forgot label input{
+    accent-color: #162938;
+    margin-right: 3px;
+}
+
+.remember-forgot a{
+    color: #162938;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.login-btn{
+    width: 100%;
+    height: 45px;
+    background: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.login-signup{
+    font-size: .9em;
+    color: #162938;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+
+.login-signup p a{
+    color: #162938;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-signup p a:hover{
+    text-decoration: underline;
+}
+
+
+
+
